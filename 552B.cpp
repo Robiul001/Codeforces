@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int n,sum=0,temp;
+    cin>>n;
+    if(n>=999999999)
+    {
+        temp=n-999999999;
+        n=999999999;
+        sum+=(temp*10);
+    }
+    if(n>=99999999)
+    {
+        temp=n-99999999;
+        n=99999999;
+        sum+=(temp*9);
+    }
+    if(n>=9999999)
+    {
+        temp=n-9999999;
+        n=9999999;
+        sum+=(temp*8);
+    }
+    if(n>=999999)
+    {
+        temp=n-999999;
+        n=999999;
+        sum+=(temp*7);
+    }
+    if(n>=99999)
+    {
+        temp=n-99999;
+        n=99999;
+        sum+=(temp*6);
+    }
+    if(n>=9999)
+    {
+        temp=n-9999;
+        n=9999;
+        sum+=(temp*5);
+    }
+    if(n>=999)
+    {
+        temp=n-999;
+        n=999;
+        sum+=(temp*4);
+    }
+    if(n>=99)
+    {
+        temp=n-99;
+        n=99;
+        sum+=(temp*3);
+    }
+    if(n>=9)
+    {
+        temp=n-9;
+        n=9;
+        sum+=(temp*2);
+    }
+    sum+=(n*1);
+    cout<<sum<<endl;
+    return 0;
+}
