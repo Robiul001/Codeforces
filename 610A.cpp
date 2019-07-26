@@ -2,22 +2,26 @@
 using namespace std;
 int main()
 {
-      long long i,j,n,cnt=0;
-      cin>>n;
-      i=1;
-      j=(n/2)-1;
-      if(n%2==0)
-      {
-            while(i<j)
-            {
-                  //if(2*(i+j)==n) /// Codition ta dile Time Limit khai
-                  cnt++;
-                  i++;
-                  j--;
-            }
-            cout<<cnt<<endl;
-      }
-      else
-            cout<<0<<endl;
-      return 0;
+    int n,temp,ans;
+    cin>>n;
+    if(n%2!=0)
+    {
+        cout<<0<<endl;
+        return 0;
+    }
+    n/=2;
+    temp=n/2;
+    if(n==(2*temp))
+        ans=temp-1;
+    else
+       ans=temp;
+
+    if(ans<=0)
+        cout<<0<<endl;
+    else
+        cout<<ans<<endl;
+    return 0;
 }
+
+
+
